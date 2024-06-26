@@ -1,12 +1,12 @@
 variable "GCP_PROJECT" {
   description = "GCP Project ID"
   type        = string
-  default     = "terraform101-384507"
+  default     = "gcpsa-sandbox"
 }
 
 variable "GCP_REGION" {
   type    = string
-  default = "asia-northeast1"
+  default = "asia-east1"
 }
 
 variable "cluster_name" {
