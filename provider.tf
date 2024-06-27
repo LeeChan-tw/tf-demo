@@ -15,14 +15,8 @@ terraform {
 # PROVIDERS
 ##################################################################################
 provider "google" {
-  project = var.GCP_PROJECT
-  region  = var.GCP_REGION
+  project = var.project_id
+  region  = var.gcp_location
   
   # zone        = var.zone
-}
-
-provider "kubernetes" {
-  host                   = "https://${module.gke.endpoint}"
-  cluster_ca_certificate = base64decode(module.gke.ca_certificate)
-  token                  = data.google_client_config.default.access_token
 }

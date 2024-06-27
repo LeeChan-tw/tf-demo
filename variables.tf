@@ -1,10 +1,10 @@
-variable "GCP_PROJECT" {
+variable "project_id" {
   description = "GCP Project ID"
   type        = string
   default     = "gcpsa-sandbox"
 }
 
-variable "GCP_REGION" {
+variable "gcp_location" {
   type    = string
   default = "asia-east1"
 }
