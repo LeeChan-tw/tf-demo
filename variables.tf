@@ -18,19 +18,3 @@ variable "cluster_name" {
   type    = string
   default = "gke-tf-ch4-7-3"
 }
-
-variable "cluster_ca_certificate" {
-  
-}
-
-variable "cluster_endpoint" {
-  
-}
-
-variable "cluster_id" {
-  
-}
-
-variable "google_compute_security_policy_id" {
-  
-}
