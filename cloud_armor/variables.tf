@@ -16,7 +16,6 @@ variable "json_parsing"{
   default = "DISABLED"  #Options are DISABLED or STANDARD
 }
 
-
 # --------------------------------- 
 # Default rules
 # --------------------------------- 

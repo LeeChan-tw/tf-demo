@@ -18,9 +18,9 @@
 data "google_client_config" "default" {}
 
 provider "kubernetes" {
-  host                   = "https://${google_container_cluster.default.endpoint}"
+  host                   = "https://${var.cluster_endpoint}"
   token                  = data.google_client_config.default.access_token
-  cluster_ca_certificate = base64decode(google_container_cluster.default.master_auth[0].cluster_ca_certificate)
+  cluster_ca_certificate = base64decode(var.cluster_ca_certificate)
 
   ignore_annotations = [
     "^autopilot\\.gke\\.io\\/.*",
@@ -133,7 +133,7 @@ resource "kubernetes_service_v1" "default" {
 
 # Provide time for Service cleanup
 resource "time_sleep" "wait_service_cleanup" {
-  depends_on = [google_container_cluster.default]
+  depends_on = [var.cluster_id]
 
   destroy_duration = "180s"
 }

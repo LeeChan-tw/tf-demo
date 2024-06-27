@@ -22,7 +22,7 @@ resource "google_compute_backend_service" "default" {
 
   health_checks = [google_compute_health_check.default.id]
 
-  security_policy = google_compute_security_policy.policy.id
+  security_policy = var.security_policy_name
   
   cdn_policy {
     cache_mode = "USE_ORIGIN_HEADERS"

@@ -18,3 +18,7 @@ variable "cluster_name" {
   type    = string
   default = "gke-tf-ch4-7-3"
 }
+
+variable "security_policy_name" {
+  default = var.google_compute_security_policy_id
+}

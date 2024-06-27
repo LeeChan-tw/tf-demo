@@ -20,4 +20,5 @@ module "gke" {
 
 module "lb_cdn" {
   source            = "./lb_cdn"
+  security_policy_name = var.security_policy_name
 }
