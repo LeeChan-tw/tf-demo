@@ -1,8 +1,8 @@
 module "app" {
   source            = "./app" 
-  cluster_id =  var.cluster_id
-  cluster_endpoint = var.cluster_endpoint
-  cluster_ca_certificate = var.cluster_ca_certificate
+  cluster_id =  gke.cluster_id
+  cluster_endpoint = gke.cluster_endpoint
+  cluster_ca_certificate = gke.cluster_ca_certificate
 }
 
 module "cloud_armor" {
@@ -23,5 +23,5 @@ module "gke" {
 
 module "lb_cdn" {
   source            = "./lb_cdn"
-  google_compute_security_policy_id = var.google_compute_security_policy_id
+  google_compute_security_policy_id = lb_cdn.google_compute_security_policy_id
 }
