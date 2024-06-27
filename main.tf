@@ -21,7 +21,7 @@ module "gke" {
   gcp_location        = var.gcp_location
 }
 
-module "lb_cdn" {
-  source            = "./lb_cdn"
-  google_compute_security_policy_id = module.cloud_armor.google_compute_security_policy_id
-}
+#module "lb_cdn" {
+#  source            = "./lb_cdn"
+#  google_compute_security_policy_id = module.cloud_armor.google_compute_security_policy_id
+#}
