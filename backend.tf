@@ -1,6 +1,6 @@
 terraform {
  backend "gcs" {
-   bucket  = "lee-gcs-logs"
+   bucket  = var.google_storage_bucket.bucket_tfstate.name
    prefix  = "terraform/state"
  }
 }
