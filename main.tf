@@ -7,13 +7,15 @@ module "cloud_armor" {
   project_id        = var.project_id
 }
 
-module "gcs_for_state" {
-  source            = "./gcs_for_state"
-  gcp_location        = var.gcp_location
-}
+#module "gcs_for_state" {
+#  source            = "./gcs_for_state"
+#  gcp_location        = var.gcp_location
+#}
 
 module "gke" {
   source            = "./gke"
+  project_id        = var.project_id
+  gcp_location        = var.gcp_location
 }
 
 module "lb_cdn" {

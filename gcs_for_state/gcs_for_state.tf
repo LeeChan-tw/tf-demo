@@ -7,11 +7,6 @@ resource "google_storage_bucket" "gcs-for-tfstate" {
   storage_class = var.gcs_storage_class
 }
 
-
-output "bucket_name" {
-  value = google_storage_bucket.gcs-for-tfstate.name
-}
-
 terraform {
  backend "gcs" {
    bucket  = var.bucket_name
