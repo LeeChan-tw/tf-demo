@@ -98,7 +98,7 @@ resource "random_id" "bucket_prefix" {
 resource "google_storage_bucket" "default" {
   name          = "${random_id.bucket_prefix.hex}-bucket-tfstate"
   force_destroy = false
-  location      = "US"
+  location      = "ASIA-EAST1"  
   storage_class = "STANDARD"
   versioning {
     enabled = true
