@@ -18,3 +18,8 @@ variable "cluster_name" {
   type    = string
   default = "gke-tf-ch4-7-3"
 }
+
+variable "BUCKET_NAME" {
+  type    = string
+  default = var.google_storage_bucket.gcs-for-tfstate.name
+}

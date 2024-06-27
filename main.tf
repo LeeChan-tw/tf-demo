@@ -101,12 +101,3 @@ resource "google_storage_bucket" "gcs-for-tfstate" {
   location      = "ASIA-EAST1"  
   storage_class = "STANDARD"
 }
-
-##################################################################################
-# RESOURCE
-##################################################################################
-
-output "BUCKET_NAME" {
-  value = google_storage_bucket.gcs-for-tfstate.name
-
-}
