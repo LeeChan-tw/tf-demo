@@ -1,2 +1,2 @@
-variable "security_policy_name" {
+variable "google_compute_security_policy_id" {
 }
