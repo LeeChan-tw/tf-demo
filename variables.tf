@@ -9,6 +9,11 @@ variable "GCP_REGION" {
   default = "asia-east1"
 }
 
+variable "VPC_NETWORK" {
+  type    = string
+  default = "lee-web-network"
+}
+
 variable "cluster_name" {
   type    = string
   default = "gke-tf-ch4-7-3"

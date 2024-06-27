@@ -11,9 +11,9 @@ module "gke" {
   project_id = var.GCP_PROJECT
   name       = var.cluster_name
   region     = var.GCP_REGION
-  zones      = ["asia-northeast1-a"]
+  #zones      = ["asia-northeast1-a"]
 
-  network    = "default"
+  network    = var.VPC_NETWORK
   subnetwork = "default"
   # asia-northeast1-pods-03263bcb	    10.14.0.0/20
   # asia-northeast1-services-03263bcb	10.18.0.0/20
@@ -106,7 +106,7 @@ resource "google_storage_bucket" "gcs-for-tfstate" {
 # RESOURCE
 ##################################################################################
 
-output "bucket_name" {
-  value = google_storage_bucket.bucket_tfstate.name
+output "BUCKET_NAME" {
+  value = google_storage_bucket.gcs-for-tfstate.name
 
 }
